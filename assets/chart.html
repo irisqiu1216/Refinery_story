@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-82af683383eb2f8f48575f12e6464888"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "type", "type": "nominal"}, "tooltip": [{"field": "year", "type": "quantitative"}, {"aggregate": "sum", "field": "cases", "type": "quantitative"}, {"field": "type", "type": "nominal"}], "x": {"field": "year", "type": "nominal"}, "y": {"aggregate": "sum", "field": "cases", "type": "quantitative"}}, "height": 300, "title": "Annual Cases by Type", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.15.1.json", "datasets": {"data-82af683383eb2f8f48575f12e6464888": [{"year": 2010, "cases": 89, "type": "total"}, {"year": 2011, "cases": 79, "type": "total"}, {"year": 2012, "cases": 86, "type": "total"}, {"year": 2013, "cases": 45, "type": "total"}, {"year": 2014, "cases": 56, "type": "total"}, {"year": 2015, "cases": 45, "type": "total"}, {"year": 2016, "cases": 77, "type": "total"}, {"year": 2017, "cases": 91, "type": "total"}, {"year": 2018, "cases": 46, "type": "total"}, {"year": 2019, "cases": 61, "type": "total"}, {"year": 2020, "cases": 43, "type": "total"}, {"year": 2021, "cases": 52, "type": "total"}, {"year": 2022, "cases": 54, "type": "total"}, {"year": 2010, "cases": 15, "type": "Chevron"}, {"year": 2011, "cases": 9, "type": "Chevron"}, {"year": 2012, "cases": 13, "type": "Chevron"}, {"year": 2013, "cases": 5, "type": "Chevron"}, {"year": 2014, "cases": 10, "type": "Chevron"}, {"year": 2015, "cases": 12, "type": "Chevron"}, {"year": 2016, "cases": 18, "type": "Chevron"}, {"year": 2017, "cases": 15, "type": "Chevron"}, {"year": 2018, "cases": 10, "type": "Chevron"}, {"year": 2019, "cases": 24, "type": "Chevron"}, {"year": 2020, "cases": 15, "type": "Chevron"}, {"year": 2021, "cases": 19, "type": "Chevron"}, {"year": 2022, "cases": 23, "type": "Chevron"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
