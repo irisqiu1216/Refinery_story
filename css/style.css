@@ -24,9 +24,21 @@ img{
 	margin-bottom: 3rem;
 }
 
-iframe{
+#chart{
 	margin-top: 3rem;
 	margin-bottom: 3rem;
+}
+
+#map{
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+#map_iframe{
+	margin-bottom: 0;
+}
+#map p{
+	font-size: smaller;
+	font-style: italic;
 }
 
 /* 
@@ -84,3 +96,4 @@ iframe{
 [data-sticky-graphic] {
 	top: 35%;
 }
+
